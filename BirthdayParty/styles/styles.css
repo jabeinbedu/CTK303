@@ -1,0 +1,184 @@
+body {
+  background: linear-gradient(
+    180deg,
+    #120e17,#6a647a);
+}
+/* Ended up going with a video background. Keeping as a fallback */
+
+/*    Z-Index Layers
+      -2 Background Video (Fixed, fills screen)
+      -1 Header (Sticky Over Video)
+       0      Unused Currently
+       1 Main Section (Scrolls over the header)
+*/
+
+header {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.header {
+    color: #ffe2c5;
+    font-size: clamp(7rem, 10vw, 20rem);
+    font-family: "Vend Sans", sans-serif;
+    padding: 4px 4px;
+    margin:0px;
+    mix-blend-mode: difference;
+}
+
+#headervideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  object-fit: cover;
+
+  z-index: -2;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 1
+}
+
+.card {
+    z-index: 1;
+    background-color: #fffcecff;
+    color: #4f4256;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    border-radius: 10px;
+    padding: 16px 8px;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.card--accentcard-1 {
+    background-color: #b2291fff;
+    color: #F2E5A2;
+}
+
+.card--accentcard-2 {
+    background-color: #731b07ff;
+    color: #F2E5A2;
+}
+
+.card h1 {
+    color: #535480;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    color: #535480;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card .emphasis {
+    color: #8284ba;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.columns {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* gap: 1rem; */
+}
+
+.container {
+    break-inside: avoid;
+    height: 100%;
+    margin: .5rem;
+}
+
+.container img {
+  display:block;
+  width: 100%; 
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  filter:
+    grayscale(100%)
+    sepia(50%)
+    hue-rotate(215deg)
+    brightness(0.9);
+  transition: filter 0.35s ease;
+}
+
+.container:hover img {
+  filter: none;
+}
+
+hr {
+  border: 0;
+  height: 4px;
+  width: 250px;
+  background-color: #a6a2b8;
+  margin: 2rem auto;
+  border-radius: 2px;
+}
+
+a {
+  padding-bottom: 2px;
+  color: #535480;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+a:link {
+  color: #535480;
+}
+
+a:visited {
+  color: #a6a2b8;
+}
+
+a:active {
+  color: #a6a2b8;
+}
+
+a:hover {
+  color: #be9800;
+}
+
+.footer {
+    color: #a6a2b8;
+    font-size: 10px;
+}
+
+audio {
+  width: 100%;
+  margin: 12px 0;
+  color: #a6a2b8;
+}
+
+@media (max-width:700px){
+  main {
+    max-width: 80vw;
+  } 
+  .columns{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #headervideo { display: none; }
+}
