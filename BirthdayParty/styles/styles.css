@@ -1,25 +1,41 @@
 body {
-  background: linear-gradient(
+    background: linear-gradient(
     180deg,
     #120e17,#6a647a);
 }
-/* Ended up going with a video background. Keeping as a fallback */
+/* Started with the gradient background. Ended up going with a video background. Keeping as a fallback and for Reduce Motion */
 
 /*    Z-Index Layers
-      -2 Background Video (Fixed, fills screen)
-      -1 Header (Sticky Over Video)
-       0      Unused Currently
-       1 Main Section (Scrolls over the header)
+      0 Background Video (Fixed, fills screen)
+      1 Header (Sticky Over Video...)
+      2 Main Section (Scrolls over the header)
+*/
+
+/* A little note, perhaps you have some insight for this, getting the main section
+to correctly start off-screen for mobile was a bit odd. In Chrome and Safari on desktop it
+looks fine, even in simulating in the Safari Responsive Design Mode.
+
+In actual performance on the phone, the new iOS Glass UI updates throw a weird glitch my way (moreso with
+aesthetics than with function). Essentially sometimes the UI elements at the bottom
+of iOS safari are transparent (address bar, etc). Othertimes the page below the UI
+is visible. In the case of this where I didn't want <main> immediately on the screen,
+I had to do a bit of an odd workaround. Padding-top 100 vh didn't push it just off screen, 
+because it seemed to count the edge of the see-through safari UI. I experimented with 100 
+svh and dvh without much success either. 
+
+I make a note in main{} about this below. My workaround was a larger padding, but this
+doesn't feel like it actually is in the spirit of what 100vh should be. Apple design quirk?
 */
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -1;
+    z-index: 1;
     pointer-events: none;
     mix-blend-mode: difference;
 }
@@ -29,49 +45,47 @@ header {
     font-size: clamp(7rem, 10vw, 20rem);
     font-family: "Vend Sans", sans-serif;
     padding: 4px 4px;
-    margin:0px;
-    mix-blend-mode: difference;
+    text-align: center;
 }
 
 #headervideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-
-  object-fit: cover;
-
-  z-index: -2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
 }
 
 main {
+    position: relative;
+    padding-top: 120vh; /* This is a bit of a workaround for an iOS quirk I mentioned above*/
     max-width: 600px;
     margin: 0 auto;
-    z-index: 1
+    z-index: 2
 }
 
 .card {
-    z-index: 1;
+    position:relative;
     background-color: #fffcecff;
     color: #4f4256;
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     border-radius: 10px;
-    padding: 16px 8px;
-    margin-bottom: 32px;
+    padding: 1rem 0.5rem;
+    margin-bottom: 2rem;
     box-shadow: 0 8px 8px 0 rgba(0,0,0,0.5);
-    transition: 0.3s;
 }
 
 .card--accentcard-1 {
-    background-color: #b2291fff;
+    background-color: #b2291f;
     color: #F2E5A2;
 }
 
 .card--accentcard-2 {
-    background-color: #731b07ff;
+    background-color: #731b07;
     color: #F2E5A2;
 }
 
@@ -96,10 +110,9 @@ main {
 }
 
 .columns {
-  width: fit-content;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* gap: 1rem; */
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .container {
@@ -109,64 +122,66 @@ main {
 }
 
 .container img {
-  display:block;
-  width: 100%; 
-  border-radius: 10px;
-  margin: 0 auto;
-  position: relative;
-  filter:
-    grayscale(100%)
-    sepia(50%)
-    hue-rotate(215deg)
-    brightness(0.9);
-  transition: filter 0.35s ease;
+    display:block;
+    width: 100%; 
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    filter:
+      grayscale(100%)
+      Sepia(50%)
+      hue-rotate(215deg)
+      brightness(0.9);
+    transition: filter 0.35s;
 }
 
 .container:hover img {
-  filter: none;
+    filter: none;
 }
 
 hr {
-  border: 0;
-  height: 4px;
-  width: 250px;
-  background-color: #a6a2b8;
-  margin: 2rem auto;
-  border-radius: 2px;
+    border: 0;
+    height: 4px;
+    width: 250px;
+    background-color: #a6a2b8;
+    margin: 2rem auto;
+    border-radius: 2px;
 }
 
 a {
-  padding-bottom: 2px;
-  color: #535480;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+    padding-bottom: 2px;
+    color: #535480;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
 
 a:link {
-  color: #535480;
+    color: #535480;
 }
 
 a:visited {
-  color: #a6a2b8;
+    color: #a6a2b8;
 }
 
 a:active {
-  color: #a6a2b8;
+    color: #a6a2b8;
 }
 
 a:hover {
-  color: #be9800;
+    color: #be9800;
 }
 
 .footer {
+    position:relative;
+    z-index: 2;
     color: #a6a2b8;
     font-size: 10px;
 }
 
 audio {
-  width: 100%;
-  margin: 12px 0;
-  color: #a6a2b8;
+    width: 100%;
+    margin: 1rem auto;
+    color: #a6a2b8;
 }
 
 @media (max-width:700px){
