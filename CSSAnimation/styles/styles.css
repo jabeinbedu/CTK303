@@ -1,0 +1,285 @@
+
+body{
+    background-color:pink;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+main{
+    position: relative;
+}
+@media (max-height: 800px) {
+  main {
+        transform: scale(.6);
+        transform-origin: top center;
+  }
+}    
+
+footer{
+    position: absolute;
+    color: #67b6ff;
+    z-index: 2;
+    margin-bottom: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    font-size: 10px;
+}
+
+.eveparent{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    height: 850px;
+    margin: 0 auto;
+    position:relative;
+}
+
+.eve{
+    position: absolute;
+    width: 300px;
+    height: 665px;
+    margin: auto;
+    animation: fulleve 5s infinite;
+}
+
+@keyframes fulleve {
+  0%   {top: 20px;}
+  25%  {top: 150px;}
+  50%  {top: 100px;}
+  75%  {top: 150px;}
+  100% {top: 20px;}
+}
+
+.evehead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 220px;
+    background: linear-gradient(#FFFFFF, #cecece);
+    clip-path: path('M 150 220 Q 10 215 0 150 0 0 150 0 q 150 0 150 150 0 70 -155 70');
+    z-index: 2;
+    animation: headmove 5s infinite;
+}
+
+@keyframes headmove {
+  0%   {top: 0px;}
+  25%  {top: 25px;}
+  50%  {top: 10px;}
+  75%  {top: 25px;}
+  100% {top: 0px;}
+}
+
+.eveface {
+position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 220px;
+    background: #222;
+    clip-path: path('M 30 140 q 15 -70 120 -80 100 10 120 80 Q 265 180 150 185 q -120 -5 -120 -45');
+    z-index: 3;
+}
+
+.eveeyes {
+    fill: none;
+    stroke: #67b6ff;
+    stroke-width: 12;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 5px #67b6ff);
+    animation: blink 5s infinite;
+}
+
+@keyframes blink {
+    0%   {stroke-width: 12;}
+    43%  {stroke-width: 12;}
+    45%  {stroke-width: 0;}
+    50%  {stroke-width: 12;}
+    71%  {stroke-width: 12;}
+    73%  {stroke-width: 0;}
+    75%  {stroke-width: 12;}
+    79%  {stroke-width: 0;}
+    81%  {stroke-width: 12;}
+    100% {stroke-width: 12;}
+}
+
+.evebody{
+    position: absolute;
+    top: 210px;
+    left: 0;
+    width: 300px;
+    height: 455px;
+    background: linear-gradient(#FFFFFF, #cecece);
+    clip-path: path('M 0 10 q 0 25 150 25 150 0 150 -25 0 445 -150 445 Q 0 455 0 5');
+}
+
+.eveleaf{
+    position: absolute;
+    top: 50px;
+    left: 180px;
+    width: 80px;
+    height: 80px;
+    fill: #acffa3;
+    filter: drop-shadow(0 0 4px #00ff26);
+    opacity: 1;
+    animation: leafflash 1.25s infinite;
+}
+
+@keyframes leafflash {
+  0%   {opacity: 1;}
+  50%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+ .evearmleft{
+    position: absolute;
+    top: 230px;
+    left: -150px;
+    width: 300px;
+    height: 455px;
+    background: linear-gradient(#FFFFFF, #cecece);
+    transform: rotate(20deg);
+    clip-path: path('M 15 50 Q 50 0 85 50 Q 95 60 70 250 Q 50 340 30 250 Q 5 60 15 50 z');
+    animation: leftarm 5s linear infinite;
+}
+
+@keyframes leftarm {
+  0%   {left: -100px;transform: rotate(5deg);}
+  25%  {left: -150px;transform: rotate(20deg);}
+  50%  {left: -130px;transform: rotate(15deg);}
+  75%  {left: -150px;transform: rotate(20deg);}
+  100% {left: -100px;transform: rotate(5deg);}
+}
+
+ .evearmright{
+    position: absolute;
+    top: 230px;
+    right: -150px;
+    width: 300px;
+    height: 455px;
+    background: linear-gradient(#FFFFFF, #cecece);
+    transform: rotate(-20deg) scaleX(-1);
+    clip-path: path('M 15 50 Q 50 0 85 50 Q 95 60 70 250 Q 50 340 30 250 Q 5 60 15 50 z');
+    animation: rightarm 5s linear infinite;
+}
+
+@keyframes rightarm {
+  0%   {right: -100px;transform: rotate(-5deg) scaleX(-1);}
+  25%  {right: -150px;transform: rotate(-20deg) scaleX(-1);}
+  50%  {right: -130px;transform: rotate(-15deg) scaleX(-1);}
+  75%  {right: -150px;transform: rotate(-20deg) scaleX(-1);}
+  100% {right: -100px;transform: rotate(-5deg) scaleX(-1);}
+}
+
+.eveshadow{
+    position: absolute;
+    bottom: 5px;
+    width: 250px;
+    height: 40px;
+    background: #2b2b2b;
+    border-radius: 50%;
+    opacity: .5;
+    filter: blur(10px);
+    z-index: -1;
+    animation: shadow-move 5s infinite;
+}
+
+@keyframes shadow-move {
+  0%   {transform: scale(0.6); filter: blur(15px);}
+  25%  {transform: scale(1.0); filter: blur(4px);}
+  50%  {transform: scale(.9); filter: blur(6px);}
+  75%  {transform: scale(1.0); filter: blur(4px);}
+  100% {transform: scale(0.6); filter: blur(15px);}
+}
+
+/*WALL-E BELOW*/
+
+.walle{
+    position: absolute;
+    z-index: -1;
+    width: 140px;
+    bottom: 50px;
+    animation: wallezip 8s ease infinite;
+}
+
+@keyframes wallezip {
+  0%   {left: -100vw; bottom: 50px; transform: scale(1)}
+  50%  {left: 200vw; bottom: 50px; transform: scale(1)}
+  60%  {left: 200vw; bottom: 400px; transform: scale(.5)}
+  95%  {left: -100vw; bottom: 400px; transform: scale(.5)}
+  100%  {left: -100vw; bottom: 50px; transform: scale(1)}
+
+}
+
+.wallebody {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    left: 20px;
+    background-color: #ffb728;
+    filter: blur(3px);
+}
+
+.walletread {
+    position: relative;
+	border-bottom: 50px solid #555;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+    border-radius: 20px; 
+	height: 0;
+	width: 100px;
+    filter: blur(3px);
+}
+
+/* If I did this again, I would not use this CSS
+shape approach, and would instead go with SVGs. It's
+stable and looks the part for now.
+
+I picked up the approach for the trapezoid for the Wall-E Treads from this:
+https://www.w3schools.com/howto/howto_css_shapes.asp */
+
+.walleneck {
+    position: relative;
+    top: 0;
+    left: 50px;
+    width: 20px;
+	height: 30px;
+	transform: skew(20deg);
+	background: #555;
+    filter: blur(3px);
+    animation: walleneck 8s infinite;
+}
+
+@keyframes walleneck {
+  0%   {transform: skew(-20deg);}
+  50%  {transform: skew(-20deg);}
+  60%  {transform: skew(20deg);}
+  90%  {transform: skew(20deg);}
+  100%  {transform: skew(20deg);}
+}
+/* The idea here is that the neck 'skew' animation gives the impression of 
+Wall-E facing different directions. 
+
+The reality being that if I wasn't using the CSS shape note from above,
+I might have approached it more like the Eve Arms, which were one of the
+last additions to this project. That said, its fun to see in this project
+a few different approaches to creating shapes that I move away from for
+different reasons.
+*/
+.wallehead {
+    position: relative;
+    height: 30px;
+    width: 60px;
+    left: 50px;
+    background-color: #343434;
+    filter: blur(3px);
+    animation: wallehead 8s infinite;
+}
+
+@keyframes wallehead {
+  0%   {left: 50px;}
+  50%  {left: 50px;}
+  60%  {left: 0px;}
+  90%  {left: 0px;}
+  100%  {left: 0px;}
+}

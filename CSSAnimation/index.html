@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Eeeeeeeeeeeeeeve</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+  </header>
+    <main aria-label="An animated CSS illustration of the robot Eve from Wall-E. She is made of sleek rounded white oval-like shapes, glowing green icon on her torso, 
+    and blinking eyes, while a blurred Wall-E zips frantically across the background.">
+      <div class="walle">
+          <div class="wallehead"></div>
+          <div class="walleneck"></div>
+          <div class="wallebody"></div>
+          <div class="walletread"></div>
+
+      </div>    
+
+    <div class="eveparent">
+      <!-- I threw the eve animated in a parent container to break the shadow from moving
+      up and down with the rest of the body. There might be a more elegant way to
+      do that within the individual element CSS.    -->
+      <div class="eve">
+        <div class="evehead">
+                <div class="eveface">
+                    <div class="eveeyes">
+                            <svg class="eveeyes" viewBox="0 0 300 220">
+                                <path d="M 70 125 Q 100 110 135 125"/>
+                                <path d="M 170 125 Q 200 110 235 125"/>
+                            </svg>
+                    </div>
+                </div>
+        </div>
+        <div class="evebody">
+            <div>
+                <svg class="eveleaf" viewBox="0 0 100 100">
+                    <circle r="20" cx="50" cy="50"/>
+                </svg>
+            </div>
+        </div>
+        <div class="evearmleft"></div>
+        <div class="evearmright"></div>
+        </div>
+        <!-- Here is the shadow element to make it animate more independent of the body going
+        up and down. Instead I wanted it to feel a bit like being on the floor.  -->
+        <div class="eveshadow"></div>
+      </div>
+  </main>
+
+  <footer>
+    <p class="footer">&copy; 2026 Jacob Beinborn for CTK403</p>
+  </footer>
+
+</body>
+</html>
+
+<!-- I decided to tinker with SVGs and Clipping Paths, as well as the CSS Animation. 
+
+I picked Eve and Wall-E due to their relatively simple geometric forms, Wall-E had
+more detail so I decided to have him a frantic blur in the background of the page.
+
+At first I tried out Clippy, but didn't have the flexibility I wanted. Then I tried
+Clippy: https://bennettfeely.com/clippy/
+
+Next was Vecta: https://vecta.io/ this was able to draw the body and face well enough,
+but seemed a bit less oriented to why I was using it.
+
+Ultimately my favorite for creating the SVG paths was SvgPathEditor, available here:
+https://yqnn.github.io/svg-path-editor/ -->
+
