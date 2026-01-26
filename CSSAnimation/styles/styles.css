@@ -110,7 +110,7 @@ position: relative;
     width: 300px;
     height: 455px;
     background: linear-gradient(#FFFFFF, #cecece);
-    clip-path: path('M 0 10 q 0 25 150 25 150 0 150 -25 0 445 -150 445 Q 0 455 0 5');
+    clip-path: path('M 0 10 q 0 25 150 25 150 0 150 -25 0 445 -150 445 Q 0 455 0 5 z');
 }
 
 .eveleaf{
