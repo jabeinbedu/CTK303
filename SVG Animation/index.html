@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact: Cloudflare uses these for encryption key generation</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<main>
+  <svg class="lamp" viewBox="-11 -2 22 34" role="img" aria-label="The entire page is a looped CSS animation of a lava lamp, with globs of lava flowing up and down">
+    <defs>
+      <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#FFFFFF33" />
+        <stop offset="35%" stop-color="#FFFFFF0F" />
+        <stop offset="70%" stop-color="#FFFFFF24" />
+        <stop offset="100%" stop-color="#FFFFFF0A" />
+      </linearGradient>
+
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#969696"/>
+        <stop offset="35%" stop-color="#d1d1d1" />
+        <stop offset="70%" stop-color="#969696" />
+        <stop offset="100%" stop-color="#d1d1d1" />
+      </linearGradient>
+      
+      <linearGradient id="metaldark" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#d1d1d1"/>
+        <stop offset="35%" stop-color="#4d4d4d"/>
+        <stop offset="70%" stop-color="#d1d1d1"/>
+        <stop offset="100%" stop-color="#4d4d4d"/>
+      </linearGradient>
+    </defs>
+
+    <path class="cap" fill="url(#metal)"
+        d="M -1 0 
+        Q 0 -0.25 1 0 
+        L 2 4 
+        L -2 4 Z"/>
+
+    <path class="glass" fill="url(#glassSheen)"
+        d="M 2 4 
+        L 5 20 
+        Q 0 22 -5 20 
+        L -2 4 Z"/>
+
+    <path class="base1" fill="url(#metaldark)"
+        d="M 5 20 
+        L 4 25 
+        Q 0 27 -4 25 
+        L -5 20 
+        Q 0 22 5 20 Z"/>
+
+    <path class="base2" fill="url(#metal)"
+        d="M 4 25 
+        L 5 30 
+        Q 0 32 -5 30 
+        L -4 25 
+        Q 0 27 4 25 Z"/>
+
+    <path class="toplava"
+        d="M -2 4 
+        L 2 4 
+        C 1 5 1 6 0 6 
+        C -1 5 -1 6 -1 5 
+        C -1.3333 4.6667 -2 5 -2 4 Z" />
+
+    <path class="bottomlava"
+        d="M -5 20 
+        C -4 19.3333 -4 17 -2 18 
+        C -1.3333 18.3333 -1 20 0 19
+        C 1 18.6667 1 17 3 18 
+        C 4 19 4 18 5 20 
+        Q 0 22 -5 20 Z" />
+
+    <clipPath id="glassClip">
+        <path
+            d="M 2 4 L 5 20 
+              Q 0 22 -5 20
+              L -2 4 Z" />
+    </clipPath>
+
+    <g clip-path="url(#glassClip)">
+      
+      <path class="blobA"
+        d="M -4 27 
+        C -6 25 -3 24 -4 23 
+        C -7 20 -2 18 -2 21 
+        Q -2 23 0 23 
+        C 1 23 2 23 2 24 
+        Q 2 25 1 25 
+        C -2 25 1 26 -1 27 
+        C -3 28 -3 28 -4 27 Z" />
+
+      <path class="blobB"
+        d="M -2 16 C -3 14 -1.3333 14 -1 13 
+        C -1.3333 12.6667 -2 13 -2 12 
+        C -2 11 -1 10 -1 11 
+        C -2 12 0 12 0 13 
+        C 0 13.3333 -1 14 -1 15 
+        C 0 17 0 18 -2 16 Z" />
+        
+      <path class="blobC"
+        d="M -4 27 
+        C -6 25 -3 24 -4 23 
+        C -7 20 -2 18 -2 21 
+        Q -2 23 0 23 
+        C 1 23 2 23 2 24 
+        Q 2 25 1 25 
+        C -2 25 1 26 -1 27 
+        C -3 28 -3 28 -4 27 Z" />
+       <path class="blobD"
+        d="M -4 27 
+        C -6 25 -3 24 -4 23 
+        C -7 20 -2 18 -2 21 
+        Q -2 23 0 23 
+        C 1 23 2 23 2 24 
+        Q 2 25 1 25 
+        C -2 25 1 26 -1 27 
+        C -3 28 -3 28 -4 27 Z" /> 
+    </g>
+    <path fill="url(#glassSheen)"
+      d="M 2 4 L 5 20 Q 0 22 -5 20 L -2 4 Z" />
+  </svg>
+</main>
+
+<footer>
+  <p class="footer">&copy; 2026 Jacob Beinborn for CTK403</p>
+</footer>
+
+</body>
+</html>
+
+<!-- Used SvgPathEditor again, available here:
+https://yqnn.github.io/svg-path-editor/ -->
+
