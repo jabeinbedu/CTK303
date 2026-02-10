@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>I'd like you to meet this cat...</title>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+
+    <body>
+        <div class="hero-container">
+            <img src="assets/juniperhero.png" alt="Incredibly fluffy light grey cat named Juniper">
+        </div>
+        <section class="intro">
+            <h1>JUNIPER</h1>
+            <p style="font-size:clamp(2.5rem, 30vw, 6rem); font-weight: 800">AKA</p>
+            <p style="font-size: 3rem; font-weight: 100">Junebug • Junie • June</p>
+            <div style="border-radius:10px; background: #FFFFFF; align-items: center; text-align: center">
+                <div class="introgallery">
+                    <img src="assets/juniperintro.jpg" alt="Incredibly fluffy light grey cat">
+
+                    <div class="intro-text-box">
+                        <p style="font-size: 3rem">Meet Juniper.</p>
+                        <p> She's a blue lynx point ragdoll cat. Approximately 3 years old.</p>
+                        <p>She does no wrong at all.</p>
+                    </div>
+                </div>
+            </div>    
+
+        </section>
+        
+        <section id="scrolly">
+            <div class="sticky-graphic">
+                <div id="chart">
+                    <img src="assets/juniper1.jpg" alt="Juniper looking regal" />
+                    <p>Figure 1: Her royal highness, Juniper</p>
+                </div>
+            </div>
+            <article class="steps">
+                    <div class="step" data-step="intro">
+                        <h2>Everyone rise for her royal highness...</h2>    
+                        <p>Here is the queen (<i>See Figure 1</i>).</p> 
+                        
+                        <p>She knows exactly how beautiful she is. Despite
+                            her appearance, she is an absolute goofball once you get to know her.
+                        </p>
+                    </div>
+
+                    <div class="step" data-step="highlight">
+                        <h2>Drop everything and nap.</h2> 
+                        <p>Behold her curious choice of furniture (<i>See Figure 2</i>).</p>
+
+                        <p>Sleeping is one of her favorite hobbies.</p> 
+                        
+                        <p>She often can be found sleeping
+                            in strange places in the house. Additionally, she will often choose 
+                            to stop in rather precarious locations — the middle of the stairs you
+                            are both walking down, behind doors of rooms you are leaving, even right
+                            behind where you are working in the kitchen.
+                        </p>
+                        <p>What she has in good looks, unfortunately is not matched in survival instincts.</p>
+                    </div>
+
+                    <div class="step" data-step="favorites">
+                        <h2>Other Favorites</h2>    
+                        <p>This blue-eyed beauty does have some favorite things. (<i>See Figure 3</i>)</p>
+                        <p>When she isn't sleeping or sitting around looking pretty, she can
+                        be found chasing mice around the house, carrying stuffed animals around
+                        in her mouth while loudly calling out for anyone to notice her.
+                        </p>
+
+                         <p>Preferred stuffed animals include a blue crocheted axolotl, needle-felted mouse, and Ernie from "Sesame Street"</p>
+                        <p>In the evenings, she is quite fond of watching Snoopy and Woodstock short
+                        cartoons on the AppleTV screensaver.
+                        </p>
+                    </div>
+
+                    <div class="step" data-step="siblings">
+                        <h2>Siblings</h2>    
+                        <p>She has an older brother (<i>See Figure 4</i>).</p>
+                        <p>His name is Louie. He is the brains of the operation. They get along well
+                        until the evening hours set in, and shenanigans kick off with races around the
+                        house.
+                        </p>
+                    </div>
+
+                    <div class="step" data-step="wrapup">
+                        <h2>I hope you enjoyed meeting Juniper.</h2>
+                        <p> Did I mention Louie can talk with speech buttons?</p>
+                        <img style="width:100%; max-width:500px; border-radius:10px;" src="assets/louieandjuniebuttons.jpg" alt="Louie and Juniper sitting side by side next to speech buttons on the floor">
+
+                    </div>
+            </article>
+        </section>
+        <section class="outro">fin.</section>
+
+        <script src="https://unpkg.com/scrollama"></script>
+
+        <script>
+            const scroller = scrollama();
+
+            scroller
+                .setup({
+                    step: ".step",
+                    offset: 0.5,
+                    progress: true,
+                    threshold: 2,
+                })
+
+                .onStepEnter(response => {
+                const stepData = response.element.dataset.step;
+                updateGraphic(stepData);
+                });
+
+            function updateGraphic(stepData) {
+            const scrollySection = document.getElementById("scrolly")    
+            const chart = document.getElementById("chart");
+            const hero = document.querySelector(".hero-container img");
+            const body = document.querySelector("body");
+            const sticky = document.querySelector(".sticky-graphic");
+            
+            if (stepData === "wrapup") {
+                sticky.style.display = "none"
+                scrollySection.style.display = "block";
+                hero.style.opacity = "0";
+            } else {
+                sticky.style.display = "grid"
+                scrollySection.style.display = "flex";
+                hero.style.opacity = "1";
+                chart. style.opacity = "1";
+            }
+            // For some reason this sometimes shows bands of background color from previous sections at the edge of the screen. 
+            if (stepData === "highlight") {
+                body.style.background = "#e8f5e9";
+                scrollySection.style.background = "#e8f5e9";
+            } else if (stepData === "intro") {
+                body.style.background = "#ff0066";
+                scrollySection.style.background = "#ff0066";
+            } else {
+                body.style.background = "#ADE4FF";
+                scrollySection.style.background = "#ADE4FF";
+            }    
+
+            
+            switch (stepData) {
+                case "intro":
+                chart.style.background = "#e3f2fd";
+                hero.style.filter = "grayscale(100%)";
+                chart.innerHTML = `
+                    <img src="assets/juniper1.jpg" alt="Juniper looking regal" />
+                    <p>Figure 1: Her royal highness, Juniper</p>
+                `;
+
+                break;
+                case "highlight":
+                chart.innerHTML = `
+                    <img src="assets/juniper2.jpg" alt="Juniper waking from a nap in a bathroom sink" />
+                    <p>Figure 2: Contrary to what this image implies, she does own a cat bed.</p>
+                `;
+                break;
+
+                case "favorites":
+                chart.innerHTML = `
+                    <img src="assets/juniper3.jpg" alt="Juniper with piercing blue eyes" />
+                    <p>Figure 3: When the sun hits just right, her eyes have a stunning blue hue.</p>
+                `;
+                chart.style.background = "#fff3e0";
+                break;
+
+                case "siblings":
+                chart.innerHTML = `
+                    <img src="assets/juniper4.jpg" alt="Juniper posing with her sibling, Louie" />
+                    <p>Figure 4: They are quite fond of each other.</p>
+                `;
+                chart.style.background = "#e8f5e9";
+                hero.style.opacity = "0";
+                break;
+
+                case "wrapup":
+                break;
+
+            }
+            }
+        </script>
+    </body>
+</html>
