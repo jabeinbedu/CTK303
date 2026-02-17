@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Welcome to Bloomington Bakery</title>
+        <!-- The most original business name ever! -->
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    </head>
+    <!-- I've been thinking a lot on WCAG compliant designing lately, still trying to get better.
+    This would benefit from a reduced-motion media query for continued development in similar page setups. -->
+    <body>
+        <header>
+            <div id="nav">
+                <div id=nav-text><p>BLOOMINGTON BAKERY</p></div>
+                <button id="nav-burger" aria-expanded="false" aria-label="Toggle menu">
+                    <i class="ph ph-list" aria-hidden="true"></i>
+                </button>
+                
+            </div>
+            <nav id="dropdown-menu" aria-label="Site Navigation">
+                <a href="#hero">Home</a>
+                <a href="#section2">Featured</a>
+                <a href="#menu">Menu</a>
+                <a href="#order2">Order</a>
+            </nav>
+        </header>
+        <main>
+        <section id="hero">
+            <video autoplay muted loop playsinline aria-label="Decorative video of baker checking trays of cinnamon rolls">
+                <source src="assets/herobg.mp4" type="video/mp4">
+            </video>
+            <!-- Video Source: Anna Shvets, Pexels -->
+            <div id="hero-content">
+                <h1>You need it? <br> We knead it.</h1>
+                <button id="order1" class="order">ORDER NOW</button>
+            </div>
+        </section>
+        <section id="section1">
+            <div id="greeting">
+                <p>Nestled in charming downtown Bloomington is Bloomington Bakery, featuring a wide range of
+                    European-style baked goods—fresh from the oven each morning.
+                </p>
+            </div>
+        </section>
+        <section id="section2">
+            <h2>Featured Pastries:
+            </h2>
+            <div id="features">
+                <div class="feature-item">
+                    <img src="assets/feature1.jpeg" alt="Product photo of raspberry linzer cookies with a two layer cookie 
+                    with a raspberry jam filling and a heart-shaped cutout on the top.">
+                    Raspberry Linzer Cookies
+                </div>
+                <div class="feature-item">
+                    <img src="assets/feature2.jpeg" alt="Product photo of a bright yellow lemon macaron with a dark blue blueberry filling">
+                    Lemon & Blueberry Macaron
+                </div>
+                <div class="feature-item">
+                    <img src="assets/feature3.jpeg" alt="Product photo of a slice of carrot cake, with three layers of cake seperated by
+                    white frosting, decorated with an orange frosted carrot.">
+                    Carrot Cake Slice
+                </div>
+                <!-- Photo Sources: Adobe Stock -->
+            </div>
+        </section>
+        <section id="menu">
+            <h2>MENU</h2>
+
+            <article>
+                <h3>Laminated Pastries</h3>
+                    <h4>Butter Croissant — $3.50</h4>
+                    <p>Flaky and buttery layers of delicious laminated dough</p>
+                    <h4>Almond Croissant — $4.50</h4>
+                    <p>Croissant with sweetened almond filling </p>
+                    <h4>Pain au Chocolate — $4.50</h4>
+                    <p>Layers of buttery dough wrapped around decadent 60% dark chocolate batons.</p>
+            </article>
+            
+            <article>
+                <h3>Pastries & Treats</h3>
+                    <h4>Chocolate Chip Cookie — $3.00</h4>
+                    <p>A classic for a reason, enjoy our large chocolate chip cookie with a variety of chocolates and flaky sea salt.</p>
+                    <h4>Double Chocolate Cookie — $3.0</h4>
+                    <p>For the chocolate fans, this intense cookie features deep chocolate flavored dough with a blend of chocolates baked in.</p>
+                    <h4>Macarons</h4>
+                    <p>The French treat! These almond-based sandwich cookies have a variety of fillings and flavors. Check our case for what's available.</p>
+            </article>
+
+            <article>
+                <h3>Coffee & Tea</h3>
+                    <p><em>Note: all drinks are 12 fl. oz</em></p>
+                    <h4>Latte — $4.00</h4>
+                    <p><em>Oat/Almond Milk +$.75; Syrups +$.50</em></p>
+                    <p>Signature espresso with milk, steamed hot or served iced.</p>
+                    <h4>Coffee — $3.00</h4>
+                    <p><em>Signature House Blend or Ethiopia Sidamo, Roasted by Sirius Coffee, Lexington, IL</em></p>
+                    <h4>Tea — <em>$Varies</em></h4>
+                    <p>We have a rotating selection of loose leaf tea, see the list at the register for current offerings.</p>
+                </article>
+
+                <button id="order2" class="order">ORDER NOW</button>
+        </section>
+        </main>
+        <footer>
+            <div id="footer">
+                <div id="footer-section1">
+                    <div id="footermap">
+                    <h2>Find us:</h2>
+                        <h3>Bloomington Bakery</h3>
+                        <p> 311 N Main Street</p>
+                        <p> Bloomington, IL 61704</p>
+                        <!-- Actually the home of Bloomington Spice Works -->
+                        <div id="socials">
+                            <a href="https://www.facebook.com/CreativeTechnologiesISU/" aria-label="Visit our Facebook page">
+                                <i class="ph ph-facebook-logo" aria-hidden="true"></i>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/isu.creativetech/reels/" aria-label="Visit our Instagram page">
+                                <i class="ph ph-instagram-logo" aria-hidden="true"></i>
+                            </a>
+                            
+                            <a href="https://youtu.be/dQw4w9WgXcQ" aria-label="Visit our Twitter/X/Rickroll page">
+                                <i class="ph ph-x-logo" aria-hidden="true"></i>
+                            </a>
+                        </div>    
+                    </div>
+                    <div id="hours">
+                    <h2>Hours</h2>
+                        <p><b>Sunday:</b> Closed</p>
+                        <p><b>Monday:</b> Closed</p>
+                        <p><b>Tuesday:</b> 6:00am-2:00pm</p>
+                        <p><b>Wednesday:</b> 6:00am-2:00pm</p>
+                        <p><b>Thursday:</b> 6:00am-2:00pm</p>
+                        <p><b>Friday:</b> 6:00am-2:00pm</p>
+                        <p><b>Saturday:</b> 6:00am-2:00pm</p>    
+                    </div>    
+                </div>
+            </div>
+        </footer>
+        <script>
+            const burger = document.getElementById('nav-burger');
+            const menu = document.getElementById('dropdown-menu');
+
+            burger.addEventListener('click', ()=>{
+                const isOpen = menu.classList.toggle('open');
+                burger.setAttribute('aria-expanded', isOpen);
+            });
+
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.remove('open');
+                });    
+            })
+
+            // This was a helpful watch for this element: https://www.youtube.com/watch?v=gXkqy0b4M5g
+        </script>
+    </body>
+</html>
