@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        html {
+        scroll-behavior: smooth;
+        }
+
+        .bg-image {  
+            /* content: ""; */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background-image: url('assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px);
+            background-repeat: no-repeat;
+        }
+    </style>
+    <!-- Background Source: /u/Riccardo via Pexels -->
+  </head>
+   <body data-bs-spy="scroll" data-bs-target=".navbar">
+     <div class="bg-image"></div>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Miniature Museum</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" href="#works">Selected Works</a>
+                    <a class="nav-link" href="#about">About</a>
+                </div>    
+            </div>
+        </div>
+  </nav>   
+ 
+    
+    <div id="home" class="container-fluid bg-dark bg-opacity-50 text-white p-5 d-flex flex-column align-items-center justify-content-center" style="min-height: 50vh;">
+      <h1 class="display-4 fw-bold mb-3">Welcome to the Miniature Museum!</h1>
+      <h3 class="fw-light">We have an extremely modest, but well-curated collection on display.</h3>
+    </div>
+    <div class="container-fluid bg-light text-black text-center px-3 py-5">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h3 class="fw-light mb-0">The Miniature Museum was established in February 2026 with exhibit pieces on display in accordance with their permission licensing from the <a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.clevelandart.org/home">Cleveland Museum of Art</a>.</h3>
+            </div>       
+            <div class="col-md-4 mt-4 mt-md-0">
+                <img src="assets/archive.jpg" class="img-fluid rounded shadow-sm" alt="View of Archival storage of the fictional museum">
+            </div>
+        </div>
+    </div>
+    <!-- Tiffany Lamp -->
+    <div id="works" class="container-lg bg-light bg-opacity-50 mt-5 p-5 rounded-3" style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+        <h2 class="fw-light">Peacock Table Lamp</h2>
+        <div class="sketchfab-embed-wrapper ratio ratio-16x9 mb-2 shadow-sm rounded"> 
+            <iframe title="2018.281 Peacock Table Lamp" 
+                frameborder="0" 
+                allowfullscreen 
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true" 
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/a24bcb6b7a2e448fad661004f403ae12/embed"> 
+            </iframe> 
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h3 class="fw-medium mb-0">Peacock Table Lamp</h3>
+                <figure>
+                    <blockquote class="blockquote">
+                        <p class="">Peacock Table Lamp (c. 1900-1902) designer probably by Clara Wolcott Driscoll (American, 1861-1944) maker probably by Tiffany Studios (American, 1902-1932). Leaded glass, bronze Diameter: 48 cm (18 7/8 in.); Overall: 65 cm (25 9/16 in.) Bequest of Charles Maurer, 2018.281</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Cleveland Museum of Art <cite title="Source Title"> via Sketchfab</cite>
+                    </figcaption>        
+                </figure>   
+            </div>       
+            <div class="col-md-4 mt-4 mt-md-0">
+                <!-- Spacer -->
+            </div>
+        </div>
+    </div>
+    <!-- Neck Amphora -->
+    <div class="container-lg bg-light bg-opacity-50 mt-5 p-5 rounded-3" style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+        <h2 class="fw-light">Neck Amphora</h2>
+        <div class="sketchfab-embed-wrapper ratio ratio-16x9 mb-2 shadow-sm rounded"> 
+            <iframe title="1970.16 Neck Amphora" 
+                frameborder="0" 
+                allowfullscreen 
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true" 
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/0bb2525bdd734bf69d5a7b2b051928ad/embed"> 
+            </iframe> 
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h3 class="fw-medium mb-0">Neck Amphora</h3>
+                <figure>
+                    <blockquote class="blockquote">
+                        <p class="">Neck Amphora (515-510 BC). Painter of Berlin 1899 (Greek). Greece, Attic, 6th Century BC Black-figure terracotta. Diameter: 29 cm (11 7/16 in.); Overall: 39.8 cm (15 11/16 in.). Andrew R. and Martha Holden Jennings Fund 1970.16</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Cleveland Museum of Art <cite title="Source Title"> via Sketchfab</cite>
+                    </figcaption>        
+                </figure>   
+            </div>       
+            <div class="col-md-4 mt-4 mt-md-0">
+                <!-- Spacer -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Two Poplars -->
+    <div class="container-lg bg-light bg-opacity-50 mt-5 p-5 rounded-3" style="backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+        <h2 class="fw-light">Two Poplars in the Alpilles</h2>
+        <div class="sketchfab-embed-wrapper ratio ratio-16x9 mb-2 shadow-sm rounded"> 
+            <iframe title="1958.32 Two Poplars in the Alpilles" 
+                frameborder="0" 
+                allowfullscreen 
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true" 
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e89d1437be394b238a85adba5cd8067a/embed"> 
+            </iframe> 
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h3 class="fw-medium mb-0">Two Poplars in the Alpilles</h3>
+                <figure>
+                    <blockquote class="blockquote">
+                        <p class="">Two Poplars in the Alpilles near Saint-Rémy, 1889. Vincent van Gogh (Dutch, 1853–1890). Oil on fabric; framed: 81 x 66.7 x 7.3 cm (31 7/8 x 26 1/4 x 2 7/8 in.); unframed: 61.6 x 45.7 cm (24 1/4 x 18 in.). The Cleveland Museum of Art, Bequest of Leonard C. Hanna Jr., 1958.32</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Cleveland Museum of Art <cite title="Source Title"> via Sketchfab</cite>
+                    </figcaption>        
+                </figure>   
+            </div>       
+            <div class="col-md-4 mt-4 mt-md-0">
+                <!-- Spacer -->
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="container-fluid bg-light text-black text-center px-3 py-5 mt-5">
+        <h3 class="fw-light mb-0">Thank you for visiting the Miniature Museum.</h3>
+        <p>We hope you will return soon to visit our rapidly growing collection.</p>
+        <p class="mb-5">The Mission of the Miniature Museum is to expand access to art from around the world. For more information on the 3D objects embedded on this page from the 
+            real Cleveland Museum of Art, <a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://www.clevelandart.org/digital-innovations/3-d-photogrammetry">visit this page featuring information on their 3D Photogrammetry process.</a>
+        </p>
+
+        <div class="row align-items-start">
+            <div class="col-md-4">
+                <h4>Hours</h4>
+                <p><b>Sunday:</b> CLOSED</p>
+                <p><b>Tuesday:</b> 6:00 am - 6:00pm</p>
+                <p><b>Wednesday:</b> 6:00 am - 6:00pm</p>
+                <p><b>Thursday:</b> 6:00 am - 6:00pm</p>
+                <p><b>Friday:</b> 6:00 am - 6:00pm</p>
+                <p><b>Saturday:</b> 6:00 am - 6:00pm</p>
+                
+            </div>       
+            <div class="col-md-4 mt-4 mt-md-0">
+                <h4>Corporate Sponsor</h4>
+                <img src="assets/sponsor.png" class="img-fluid rounded shadow-sm" alt="Logo from corporate sponsor Dunder Mifflin Paper Company">
+                <!-- Source: Wikimedia Commons -->
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+                <h4>Follow Us</h4>
+                <a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" aria-label="Facebook" href="https://www.facebook.com/CreativeTechnologiesISU/"><i class="bi bi-facebook me-2"></i>Facebook</a><br>
+                <a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" aria-label="Youtube" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1&pp=ygUJcmljayByb2xsoAcB"><i class="bi bi-youtube me-2"></i>YouTube</a><br>
+                <a class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" aria-label="Sketchfab" href="https://sketchfab.com/clevelandart"><i class="bi bi-gear-wide me-2"></i>Sketchfab</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ </body>
+</html>
