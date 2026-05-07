@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Portfolio Styleguide</title>
+
+    <title>jacob - Portfolio Styleguide</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet"/>
@@ -16,229 +17,63 @@
 </head>
 
 <body>
-    <header class="container py-5 text-center">
-        <div class="row">
-            <div class="col">
-                <h1 class="display-4">
-                    Jacob Beinborn
-                </h1>
-                <p class="lead mt-3">
-                    Portfolio Styleguide
-                </p>
+    <header class=" py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4">
+                        jacob beinborn
+                    </h1>
+                    <p class="lead mt-3">
+                        Portfolio Styleguide
+                    </p>
+                </div>
             </div>
         </div>
     </header>
 
+    <nav>
+        <div id="nav-mount"></div>
+    </nav>
+        <!-- Please see the note in the nav.html file regarding this nav-mount structure.-->
     <main class="container py-4">
-        <div class="row">
-            <div class="row align-items-stretch mb-5">
-                <div class="col-md-2 d-flex justify-content-center align-items-center" style="background-color: #F5F569; min-height: 100%; color:#000000">
+        <div class="row align-items-stretch mb-5">
+                <div class="col-md-2 d-flex justify-content-center align-items-center section-label-yellow">
                     <div class="vertical-label">OVERVIEW</div>
                 </div>
                 <div class="col-md-10">
-                    <h2>Style Overview</h2>
-                    <p>This will be the design system I will eventually use to build out a future portfolio refresh. right
-                        now, everything is on one page. Next I'd like each of these to become their own tabs/ navigable.
+                    <h1>Project Overview</h1>
+                    <p>This styleguide functions as both documentation and a working demonstration of the design system developed for a 
+                        forthcoming portfolio refresh. While the full portfolio will showcase a broader range of work and pages, this 
+                        document defines the design vocabulary and the modular blocks that will support the portfolio.
                     </p>
-                </div>
-            </div>
-        </div>            
-        <div class="row">
-            <div class="row align-items-stretch mb-5">
-                <div class="col-md-2 d-flex justify-content-center align-items-center color-label-bg">
-                    <div class="vertical-label">TYPOGRAPHY</div>
-                </div>
-                <div class="col-md-10">
-                    <h2>Type System</h2>
-                    <p>Lorem Ipsum</p>
+                    <hr class="divider">
+                    <p>It is structured into three sections:</p>
+                
+                    <h2><a href="type.html">Type <span class="mdi mdi-arrow-right"></span></a></h2>
+                    <p>Defines the typography system — which fonts are used, in which weights, and in what contexts.</p>
 
-                    <div class="type-card">
-                        <div class="type-swatch" style="font-family: 'Boldonse', serif;">Aa</div>
-                        <div class="type-info">
-                            <h3>Boldonse</h3>
-                            <p><strong>Role:</strong> Display</p>
-                            <p><strong>Weight:</strong> 400</p>
-                            <p><strong>Use:</strong> Hero text</p>
-                        </div>
-                    </div>
+                    <h2><a href="color.html">Color <span class="mdi mdi-arrow-right"></span></a></h2>
+                    <p>Documents the color palette, including primary, accents, neutral colors, their intended use cases, and accessibility contrast data.</p>
 
-                    <div class="type-card">
-                        <div class="type-swatch" style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 700;">Aa</div>
-                        <div class="type-info">
-                            <h3>Hanken Grotesk</h3>
-                            <p><strong>Role:</strong> Headings</p>
-                            <p><strong>Weight:</strong> 500, 700</p>
-                            <p><strong>Use:</strong> H1 through H6, Navigation, Buttons</p>
-                        </div>
-                    </div>
-
-                    <div class="type-card">
-                        <div class="type-swatch" style="font-family: 'Atkinson Hyperlegible', sans-serif;">Aa</div>
-                        <div class="type-info">
-                            <h3>Atkinson Hyperlegible</h3>
-                            <p><strong>Role:</strong> Body</p>
-                            <p><strong>Weight:</strong> 400, 700, 400 italic</p>
-                            <p><strong>Use:</strong> Paragraph text, captions</p>
-                        </div>
-                    </div>
-
-                    <div class="type-card">
-                        <div class="type-swatch" style="font-family: 'IBM Plex Mono', monospace;">Aa</div>
-                        <div class="type-info">
-                            <h3>IBM Plex Mono</h3>
-                            <p><strong>Role:</strong> Monospace</p>
-                            <p><strong>Weight:</strong> 300, 400, 500</p>
-                            <p><strong>Use:</strong> Section numbers, code</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-stretch mb-5">
-                <div class="col-md-2 d-flex justify-content-center align-items-center color-label-bg">
-                    <div class="vertical-label">COLOR</div>
-                </div>
-                <div class="col-md-10">
-                    <h2>Color System</h2>
-                    <p>Lorem Ipsum</p>
-
-                    <div class="color-card">
-                        <div class="color-swatch" style="background-color: #000000">                          
-                        </div>
-                        <div class="color-info">
-                            <h3>Black</h3>
-                            <p><strong>HEX:</strong> #000000</p>
-                            <p><strong>RGB:</strong> 0, 0, 0</p>
-                            <p><strong>Uses:</strong> Lorem Ipsum</p>
-                        </div>
-                    </div>
-
-                    <div class="color-card">
-                        <div class="color-swatch" style="background-color: #FFFFFF">                          
-                        </div>
-                        <div class="color-info">
-                            <h3>White</h3>
-                            <p><strong>HEX:</strong> #FFFFFF</p>
-                            <p><strong>RGB:</strong> #, #, #</p>
-                            <p><strong>Uses:</strong> Lorem Ipsum</p>
-                        </div>
-                    </div>
-
-                    <div class="color-card">
-                        <div class="color-swatch" style="background-color: #F5F569">                          
-                        </div>
-                        <div class="color-info">
-                            <h3>Yellow</h3>
-                            <p><strong>HEX:</strong> #F5F569</p>
-                            <p><strong>RGB:</strong> #, #, #</p>
-                            <p><strong>Uses:</strong> Lorem Ipsum</p>
-                        </div>
-                    </div>
-
-                    <div class="color-card">
-                        <div class="color-swatch" style="background-color: #33658A">                          
-                        </div>
-                        <div class="color-info">
-                            <h3>Blue</h3>
-                            <p><strong>HEX:</strong> #33658A</p>
-                            <p><strong>RGB:</strong> #, #, #</p>
-                            <p><strong>Uses:</strong> Lorem Ipsum</p>
-                        </div>
-                    </div>
-
-                    <div class="color-card">
-                        <div class="color-swatch" style="background-color: #F26419">                          
-                        </div>
-                        <div class="color-info">
-                            <h3>Orange</h3>
-                            <p><strong>HEX:</strong> #F26419</p>
-                            <p><strong>RGB:</strong> #, #, #</p>
-                            <p><strong>Uses:</strong> Lorem Ipsum</p>
-                        </div>
-                    </div>
+                    <h2><a href="interface.html">Interface <span class="mdi mdi-arrow-right"></span></a></h2>
+                    <p>Covers the structural design decisions that organize content visually across the portfolio. This includes layout, components, and spacing.</p>
                     
-                    <div class="color-card">
-                        <div class="color-swatch" style="background-color: #5C5750">                          
-                        </div>
-                        <div class="color-info">
-                            <h3>Dark Grey</h3>
-                            <p><strong>HEX:</strong> #5C5750</p>
-                            <p><strong>RGB:</strong> #, #, #</p>
-                            <p><strong>Uses:</strong> Lorem Ipsum</p>
-                        </div>
-                    </div>
-
-                    <div class="color-card">
-                        <div class="color-swatch" style="background-color: #DDDAD3">                          
-                        </div>
-                        <div class="color-info">
-                            <h3>Light Grey</h3>
-                            <p><strong>HEX:</strong> #DDDAD3</p>
-                            <p><strong>RGB:</strong> #, #, #</p>
-                            <p><strong>Uses:</strong> Lorem Ipsum</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-stretch mb-5">
-                <div class="col-md-2 d-flex justify-content-center align-items-center color-label-bg">
-                    <div class="vertical-label">INTERFACE</div>
-                </div>
-                <div class="col-md-10">
-                    <h2>Interface System</h2>
-                    <p>Lorem Ipsum</p>
-
-                    <div class="interface-card">
-                        <div class="interface-swatch">
-                            <div class="sample-radius"></div>
-                        </div>
-
-                        <div class="interface-info">
-                            <h3>Corner Radius</h3>
-                            <p><strong>Style:</strong> Soft</p>
-                            <p><strong>Value:</strong> 4px</p>
-                            <p><strong>Use:</strong> All buttons, inputs, and cards</p>
-                        </div>
-                    </div>
-
-                    <div class="interface-card">
-                        <div class="interface-swatch">
-                            <button type="button" class="sample-button">Action</button>
-                        </div>
-
-                        <div class="interface-info">
-                            <h3>Buttons</h3>
-                            <p><strong>Style:</strong> Outlined</p>
-                            <p><strong>Value:</strong> 1px</p>
-                            <p><strong>Use:</strong> Border only, no fill.</p>
-                        </div>
-                    </div>
-
-                    <div class="interface-card">
-                        <div class="interface-swatch">
-                            <div class="sample-card"></div>
-                        </div>
-
-                        <div class="interface-info">
-                            <h3>Cards</h3>
-                            <p><strong>Style:</strong> Bordered</p>
-                            <p><strong>Value:</strong> 1px</p>
-                            <p><strong>Use:</strong> All card elements, including swatches,</p>
-                        </div>
-                    </div>
-
-
+                    <hr class="divider">
+                    <h3 class="mt-3">Future Design Goals</h3>
+                    <p>Future portfolio version will explore a more interactive landing page with full-bleed video elements.</p>
 
                 </div>
-            </div>
-
         </div>
     </main>
 
     <footer>
-
+        <p>&copy; 2026 - jacob beinborn</p>
+        <a href="https://www.linkedin.com/in/jacobbeinborn/" class="footer-social" aria-label="LinkedIn">
+        <span class="mdi mdi-linkedin"></span>
+    </a>
     </footer>
 
+    <script src="scripts/nav-loader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

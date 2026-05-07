@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"> jacob</a>
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle Navigation">
+             <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="type.html">Type</a></li>
+                <li class="nav-item"><a class="nav-link" href="color.html">Color</a></li>
+                <li class="nav-item"><a class="nav-link" href="interface.html">Interface</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- 
+Note: I found myself interested in reusable components while building out this project. Unfortunately the nav system requires re-building and updating the Navigation
+across all pages individually when making updates and additions. To avoid this, some strategies for modularity were explored (perhaps pointing towards future benefit of a system like WordPress instead). 
+
+As a matter of AI disclosure, I explored this implementation using a fetch approach from some discussions on Stack Overflow, co-developed with Claude assisting. In the long term, I'm not super in love with this implementation. It loads unevenly, which made experiments with page
+transitions fail. If I started this project over again, I wouldn't do this approach again, yet for the sake of learning and experimentation I'm leaving it in this project. That said, I'm glad I tried it, it may be a useful strategy for a future project, just not in this way. -->

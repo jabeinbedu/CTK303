@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>jacob - Color</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Boldonse&family=Hanken+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div id="nav-mount"></div>
+    </nav>
+        <!-- Please see the note in the nav.html file regarding this nav-mount structure.-->
+    <main class="container py-4">        
+            <div class="row align-items-stretch mb-5">
+                <div class="col-md-2 d-flex justify-content-center align-items-center section-label-bg">
+                    <div class="vertical-label">COLOR</div>
+                </div>
+                <div class="col-md-10">
+                    <h1>Color System</h1>
+                    <p>These colors were chosen to be bold, to make statements. At the same time, the breadth of this palette is intended to foster versatility and support accessibility.</p>
+                    <p>The color matrix at the bottom of the page is intended to demonstrate all of the potential pairings and which levels of usage are available to specific use cases, as defined
+                        by WCAG contrast standards.
+                    </p>
+                    <p>All of these colors also have personal importance. Beyond their loud aesthetics, they were derived from experiences traveling in Iceland across several trips. Certain pairings evoke personal
+                        memories and can be found in my photography there in various permutations.
+                    </p>
+                    <div class="style-card">
+                        <div class="style-card-swatch" style="background-color: #000000">                          
+                        </div>
+                        <div class="style-card-info">
+                            <h3>Black</h3>
+                            <p><strong>HEX:</strong> #000000</p>
+                            <p><strong>RGB:</strong> 0, 0, 0</p>
+                            <p><strong>Uses:</strong> Primary text,borders, and structural elements.</p>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-swatch" style="background-color: #FFFFFF">                          
+                        </div>
+                        <div class="style-card-info">
+                            <h3>White</h3>
+                            <p><strong>HEX:</strong> #FFFFFF</p>
+                            <p><strong>RGB:</strong> 255, 255, 255</p>
+                            <p><strong>Uses:</strong> Page backgrounds, card surfaces, and text on dark backgrounds. This is a neutral foundation to allow the content to lead.</p>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-swatch" style="background-color: #F5F569">                          
+                        </div>
+                        <div class="style-card-info">
+                            <h3>Yellow</h3>
+                            <p><strong>HEX:</strong> #F5F569</p>
+                            <p><strong>RGB:</strong> 245, 245, 105</p>
+                            <p><strong>Uses:</strong> Section labels, tags, accent highlights, footer border. It's loud and brings the energy where needed.</p>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-swatch" style="background-color: #33658A">                          
+                        </div>
+                        <div class="style-card-info">
+                            <h3>Blue</h3>
+                            <p><strong>HEX:</strong> #33658A</p>
+                            <p><strong>RGB:</strong> 51, 101, 138</p>
+                            <p><strong>Uses:</strong> Section labels, tags, and cooler accents.</p>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-swatch" style="background-color: #F26419">                          
+                        </div>
+                        <div class="style-card-info">
+                            <h3>Orange</h3>
+                            <p><strong>HEX:</strong> #F26419</p>
+                            <p><strong>RGB:</strong> 242, 100, 25</p>
+                            <p><strong>Uses:</strong> Interactive states (e.g. hovers), primary dividers, primary accent. It's intended to be a note of action rather than a cautionary orange.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="style-card">
+                        <div class="style-card-swatch" style="background-color: #5C5750">                          
+                        </div>
+                        <div class="style-card-info">
+                            <h3>Dark Grey</h3>
+                            <p><strong>HEX:</strong> #5C5750</p>
+                            <p><strong>RGB:</strong> 92, 87, 80</p>
+                            <p><strong>Uses:</strong> Secondary text, eyebrows, and other UI elements.</p>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-swatch" style="background-color: #DDDAD3">                          
+                        </div>
+                        <div class="style-card-info">
+                            <h3>Light Grey</h3>
+                            <p><strong>HEX:</strong> #DDDAD3</p>
+                            <p><strong>RGB:</strong> 221, 218, 211</p>
+                            <p><strong>Uses:</strong> Component backgrounds, versatility against dark backgrounds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div>
+            <h2>WCAG Color Matrix</h2>
+            <p>Each cell shows the row's text color rendered on the column's background. The ratio indicates WCAG 2.1 compliance for body-sized text.</p>
+            <p>This chart is inspired by <a href="https://abc.useallfive.com">Accessible Brand Colors</a> by Use All Five.</p>
+            <!-- This is inspired by a chart by "Use All Five" -->
+            <div class="wcag-matrix mb-3">
+                <div class="wcag-row wcag-header-row">
+                    <div class="wcag-cell wcag-cell-corner">
+                        <span class="wcag-label label-tx">bg →</span>
+                        <span class="wcag-label label-bg">↓ text</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-header">
+                        <div class="wcag-swatch bg-bk"></div>
+                        <span class="wcag-label">Black</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-header">
+                        <div class="wcag-swatch bg-wh" style="border-color: var(--color-black);"></div>
+                        <span class="wcag-label">White</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-header">
+                        <div class="wcag-swatch bg-yl"></div>
+                        <span class="wcag-label">Yellow</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-header">
+                        <div class="wcag-swatch bg-bl"></div>
+                        <span class="wcag-label">Blue</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-header">
+                        <div class="wcag-swatch bg-or"></div>
+                        <span class="wcag-label">Orange</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-header">
+                        <div class="wcag-swatch bg-gd"></div>
+                        <span class="wcag-label">Dk Grey</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-header">
+                        <div class="wcag-swatch bg-gp"></div>
+                        <span class="wcag-label">Lt Grey</span>
+                    </div> 
+                </div>       
+
+                <div class="wcag-row">
+                    <div class="wcag-cell wcag-cell-rowhead">
+                        <div class="wcag-swatch-sm bg-bk"></div>
+                        <span class="wcag-label">Bk</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-diag bg-bk">
+                        <span class="wcag-ratio">—</span>
+                    </div>
+                    <div class="wcag-cell bg-wh tx-bk">
+                        <span class="wcag-ratio">21.00</span>
+                        <span class="wcag-level">AAA</span>
+                    </div>
+                    <div class="wcag-cell bg-yl tx-bk">
+                        <span class="wcag-ratio">18.15</span>
+                        <span class="wcag-level">AAA</span>
+                    </div>
+                    <div class="wcag-cell bg-bl tx-bk">
+                        <span class="wcag-ratio">3.37</span>
+                        <span class="wcag-level wcag-level-fail">AA lg</span>
+                    </div>
+                    <div class="wcag-cell bg-or tx-bk">
+                        <span class="wcag-ratio">6.61</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell bg-gd tx-bk">
+                        <span class="wcag-ratio">2.93</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-gp tx-bk">
+                        <span class="wcag-ratio">15.04</span>
+                        <span class="wcag-level">AAA</span>
+                    </div>
+                </div>
+
+                <div class="wcag-row">
+                    <div class="wcag-cell wcag-cell-rowhead">
+                        <div class="wcag-swatch-sm bg-wh" style="border-color: var(--color-black);"></div>
+                        <span class="wcag-label">Wh</span>
+                    </div>
+                    <div class="wcag-cell bg-bk tx-wh">
+                        <span class="wcag-ratio">21.00</span>
+                        <span class="wcag-level">AAA</span></div>
+                    <div class="wcag-cell wcag-cell-diag bg-wh"><span class="wcag-ratio">—</span></div>
+                    <div class="wcag-cell bg-yl tx-wh">
+                        <span class="wcag-ratio">1.16</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-bl tx-wh">
+                        <span class="wcag-ratio">6.23</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell bg-or tx-wh">
+                        <span class="wcag-ratio">3.18</span>
+                        <span class="wcag-level wcag-level-fail">AA lg</span>
+                    </div>
+                    <div class="wcag-cell bg-gd tx-wh">
+                        <span class="wcag-ratio">7.16</span>
+                        <span class="wcag-level">AAA</span>
+                    </div>
+                    <div class="wcag-cell bg-gp tx-wh">
+                        <span class="wcag-ratio">1.40</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                </div>
+
+                <div class="wcag-row">
+                    <div class="wcag-cell wcag-cell-rowhead">
+                        <div class="wcag-swatch-sm bg-yl"></div>
+                        <span class="wcag-label">Yl</span>
+                    </div>
+                    <div class="wcag-cell bg-bk tx-yl">
+                        <span class="wcag-ratio">18.15</span>
+                        <span class="wcag-level">AAA</span>
+                    </div>
+                    <div class="wcag-cell bg-wh tx-yl">
+                        <span class="wcag-ratio">1.16</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-diag bg-yl">
+                        <span class="wcag-ratio">—</span>
+                    </div>
+                    <div class="wcag-cell bg-bl tx-yl">
+                        <span class="wcag-ratio">5.39</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell bg-or tx-yl">
+                        <span class="wcag-ratio">2.74</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-gd tx-yl">
+                        <span class="wcag-ratio">6.18</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell bg-gp tx-yl">
+                        <span class="wcag-ratio">1.21</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                </div>
+
+                <div class="wcag-row">
+                    <div class="wcag-cell wcag-cell-rowhead">
+                        <div class="wcag-swatch-sm bg-bl"></div>
+                        <span class="wcag-label">Bl</span>
+                    </div>
+                    <div class="wcag-cell bg-bk tx-bl">
+                        <span class="wcag-ratio">3.37</span>
+                        <span class="wcag-level wcag-level-fail">AA lg</span>
+                    </div>
+                    <div class="wcag-cell bg-wh tx-bl">
+                        <span class="wcag-ratio">6.23</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell bg-yl tx-bl">
+                        <span class="wcag-ratio">5.39</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-diag bg-bl">
+                        <span class="wcag-ratio">—</span>
+                    </div>
+                    <div class="wcag-cell bg-or tx-bl">
+                        <span class="wcag-ratio">1.96</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-gd tx-bl">
+                        <span class="wcag-ratio">1.15</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-gp tx-bl">
+                        <span class="wcag-ratio">4.47</span>
+                        <span class="wcag-level wcag-level-fail">AA lg</span>
+                    </div>
+                </div>
+
+                <div class="wcag-row">
+                    <div class="wcag-cell wcag-cell-rowhead">
+                        <div class="wcag-swatch-sm bg-or"></div>
+                        <span class="wcag-label">Or</span>
+                    </div>
+                    <div class="wcag-cell bg-bk tx-or">
+                        <span class="wcag-ratio">6.61</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell bg-wh tx-or">
+                        <span class="wcag-ratio">3.18</span>
+                        <span class="wcag-level wcag-level-fail">AA lg</span>
+                    </div>
+                    <div class="wcag-cell bg-yl tx-or">
+                        <span class="wcag-ratio">2.74</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-bl tx-or">
+                        <span class="wcag-ratio">1.96</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-diag bg-or">
+                        <span class="wcag-ratio">—</span>
+                    </div>
+                    <div class="wcag-cell bg-gd tx-or">
+                        <span class="wcag-ratio">2.25</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-gp tx-or">
+                        <span class="wcag-ratio">2.28</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                </div>
+
+                <div class="wcag-row">
+                    <div class="wcag-cell wcag-cell-rowhead">
+                        <div class="wcag-swatch-sm bg-gd"></div>
+                        <span class="wcag-label">DG</span>
+                    </div>
+                    <div class="wcag-cell bg-bk tx-gd">
+                        <span class="wcag-ratio">2.93</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-wh tx-gd">
+                        <span class="wcag-ratio">7.16</span>
+                        <span class="wcag-level">AAA</span>
+                    </div>
+                    <div class="wcag-cell bg-yl tx-gd">
+                        <span class="wcag-ratio">6.18</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell bg-bl tx-gd">
+                        <span class="wcag-ratio">1.15</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-or tx-gd">
+                        <span class="wcag-ratio">2.25</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-diag bg-gd">
+                        <span class="wcag-ratio">—</span>
+                    </div>
+                    <div class="wcag-cell bg-gp tx-gd">
+                        <span class="wcag-ratio">5.13</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                </div>
+
+                <div class="wcag-row">
+                    <div class="wcag-cell wcag-cell-rowhead">
+                        <div class="wcag-swatch-sm bg-gp"></div>
+                        <span class="wcag-label">LG</span>
+                    </div>
+                    <div class="wcag-cell bg-bk tx-gp">
+                        <span class="wcag-ratio">15.04</span>
+                        <span class="wcag-level">AAA</span>
+                    </div>
+                    <div class="wcag-cell bg-wh tx-gp">
+                        <span class="wcag-ratio">1.40</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-yl tx-gp">
+                        <span class="wcag-ratio">1.21</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-bl tx-gp">
+                        <span class="wcag-ratio">4.47</span>
+                        <span class="wcag-level wcag-level-fail">AA lg</span>
+                    </div>
+                    <div class="wcag-cell bg-or tx-gp">
+                        <span class="wcag-ratio">2.28</span>
+                        <span class="wcag-level wcag-level-fail">fail</span>
+                    </div>
+                    <div class="wcag-cell bg-gd tx-gp">
+                        <span class="wcag-ratio">5.13</span>
+                        <span class="wcag-level">AA</span>
+                    </div>
+                    <div class="wcag-cell wcag-cell-diag bg-gp">
+                        <span class="wcag-ratio">—</span>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </main>
+<!-- AI Disclosure notice: This color matrix ended up being a lot more tedious than anticipated. I built the structure of this and used Claude to populate with my content, and some formatting touchups. Learned some cool logic-like tricks with CSS!   -->
+    <footer>
+        <p>&copy; 2026 - jacob beinborn</p>
+        <a href="https://www.linkedin.com/in/jacobbeinborn/" class="footer-social" aria-label="LinkedIn">
+        <span class="mdi mdi-linkedin"></span>
+    </a>
+    </footer>
+    <script src="scripts/nav-loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
